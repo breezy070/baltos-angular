@@ -1,0 +1,171 @@
+<!-- Sidebar/menu -->
+<!-- w3-animate-left -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-text-grey w3-collapse w3-top w3-center" [ngClass]="status ? 'visible' : 'hidden'"
+    style="z-index:3;width:100%;height: 100%;font-weight:bold; display: block;overflow-y: hidden;"  id="mySidebar" #mySidebar><br>
+    <h3 class="w3-padding-64 w3-center"><b>BALTOS</b></h3>
+
+    <a href="javascript:void(0)" (click)="w3_close()"
+        class="w3-bar-item w3-button w3-padding w3-hide-large">CLOSE</a>
+    <!-- <a href="#" (click)="w3_close()" class="w3-bar-item w3-button"></a> -->
+    <!-- <a href="#gridcontainer" (click)="w3_close()" class="w3-bar-item w3-button animate-out">BACK TO TOP</a> -->
+    <a href="#about" (click)="w3_close()" class="w3-bar-item w3-button">ABOUT ME</a>
+    <a href="#contact" (click)="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+    <a href="#gallery" (click)="w3_close()" class="w3-bar-item w3-button">GALLERY</a>
+</nav>
+
+<!-- Top menu on small screens -->
+<!-- w3-hide-large  -->
+<header class="w3-top w3-white w3-xlarge w3-padding-16" style="position: relative;">
+    <h1 class="w3-left w3-padding">BALTOS</h1>
+     <ul class="hide-li">
+        <li><a href="#about">ABOUT ME</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+        <li><a href="#gallery">GALLERY</a></li>
+    </ul>
+    <a href="javascript:void(0)" class="w3-right w3-button w3-white hide-burger-li" (click)="w3_open()">☰</a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" (click)="w3_close()" style="cursor:pointer"
+    id="myOverlay" #myOverlay></div>
+
+<!-- !PAGE CONTENT! -->
+<!-- style="margin-left:300px" -->
+<!-- min-height:100% -->
+<div class="w3-main" id="main" #main >
+
+    <!-- Push down content on small screens -->
+    <!-- <div class="w3-hide-large" style="margin-top:50px"></div> -->
+
+    <!-- Modal for full size images on click-->
+    <!-- <div id="modal01" #modal01 class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'" >
+        <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+        <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+            <img id="img01"  #img01 class="w3-image">
+            <p id="caption"></p>
+        </div>
+    </div> -->
+
+    <!-- About section -->
+    <!-- <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="about">
+        <h4><b>About Me</b></h4>
+        <img src="https://www.w3schools.com/w3images/avatar_hat.jpg" alt="Me" class="w3-image w3-padding-32" width="600" height="650">
+        <div class="w3-content w3-justify" style="max-width:600px">
+            <h4>My Name</h4>
+            <p>Some text about me. I love taking photos of PEOPLE. I am lorem ipsum consectetur adipiscing elit, sed
+                do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <p>mail: example.com</p>
+            <p>tel: 5353 35531</p>
+            <hr class="w3-opacity">
+            
+        </div>
+    </div> -->
+
+    <!-- Contact section -->
+    <!-- <div class="w3-container w3-light-grey w3-padding-32 w3-padding-large" id="contact">
+        <div class="w3-content" style="max-width:600px">
+            <h4 class="w3-center"><b>Contact Me</b></h4>
+            <p>Do you want me to photograph you? Fill out the form and fill me in with the details :) I love meeting
+                new people!</p>
+            <form action="/action_page.php" target="_blank">
+                <div class="w3-section">
+                    <label>Name</label>
+                    <input class="w3-input w3-border" type="text" name="Name" required>
+                </div>
+                <div class="w3-section">
+                    <label>Email</label>
+                    <input class="w3-input w3-border" type="text" name="Email" required>
+                </div>
+                <div class="w3-section">
+                    <label>Message</label>
+                    <input class="w3-input w3-border" type="text" name="Message" required>
+                </div>
+                <button type="submit" class="w3-button w3-block w3-black w3-margin-bottom">Send Message</button>
+            </form>
+        </div>
+    </div> -->
+
+    <div class="container" style="margin: 0 auto;">
+        <div class="gallery-grid" id="gallery">
+                <figure class="gallery__item gallery__item--1">
+                <img src="../assets/img01.jpg" class="gallery__img" alt="Image 1">
+                </figure>
+                <!-- <div class="gallery__item--text-1"><p>some text</p></div> -->
+                <figure class="gallery__item gallery__item--2">
+                <img src="../assets/img08.jpg" class="gallery__img" alt="Image 2">
+                </figure>
+                <!-- <div class="gallery__item--text-2"><p>some text</p></div> -->
+                <figure class="gallery__item gallery__item--3">
+                <img src="../assets/img03.jpg" class="gallery__img" alt="Image 3">
+                </figure>
+                <!-- <div class="gallery__item--text-3"><p>some text</p></div> -->
+                <figure class="gallery__item gallery__item--4">
+                <img src="../assets/img04.jpg" class="gallery__img" alt="Image 4">
+                </figure>
+                <figure class="gallery__item gallery__item--5">
+                <img src="../assets/img02.jpg" class="gallery__img" alt="Image 5">
+                </figure>
+                <figure class="gallery__item gallery__item--8">
+                    <img src="../assets/img03.jpg" class="gallery__img" alt="Image 8">
+                    </figure>
+                <figure class="gallery__item gallery__item--6">
+                <img src="../assets/img06.jpg" class="gallery__img" alt="Image 6">
+                </figure>
+
+                <!-- ------------------------------------------------------------------- -->
+
+                    <figure class="gallery__item gallery__item--7">
+                        <img src="../assets/img05.jpg" class="gallery__img" alt="Image 7">
+                    </figure>
+                
+                    <!-- <figure class="gallery__item gallery__item--8">
+                        <img src="../assets/img07.jpg" class="gallery__img" alt="Image 8">
+                    </figure>
+                  
+                    <figure class="gallery__item gallery__item--9">
+                        <img src="../assets/img09.jpg" class="gallery__img" alt="Image 9">
+                    </figure> -->
+                <!-- ------------------------------------------------------------------- -->
+
+
+                    <!-- <figure class="gallery__item gallery__item--10">
+                        <img src="../assets/img10.jpg" class="gallery__img" alt="Image 10">
+                    </figure>
+                    <figure class="gallery__item gallery__item--11">
+                        <img src="../assets/img11.jpg" class="gallery__img" alt="Image 11">
+                    </figure>
+                    <figure class="gallery__item gallery__item--12">
+                        <img src="../assets/img12.jpg" class="gallery__img" alt="Image 12">
+                    </figure> -->
+        </div>
+    </div>
+
+
+
+</div>
+
+    <!-- Footer -->
+    <footer class="">
+        <div class="w3-row-padding">
+            <div class="w3-third">
+            </div>
+
+            <div class="w3-third">
+            </div>
+
+            <div class="w3-third">
+            </div>
+        </div>
+    </footer>
+
+
+
+
+<router-outlet></router-outlet>
