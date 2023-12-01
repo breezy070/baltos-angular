@@ -15,7 +15,7 @@ import { OnInit } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent implements AfterViewInit{
+export class AppComponent {
 
   
   @ViewChild("mySidebar") mySideBar : any;
@@ -32,19 +32,19 @@ export class AppComponent implements AfterViewInit{
     
   }
 
-  ngAfterViewInit(): void {
-    // console.log("sidebar: "+this.mySideBar)
-    // console.dir(this.mySideBar.nativeElement);
-    // this.renderer.setStyle(this.mySideBar.nativeElement, 'display', 'block');
-    // this.renderer.setStyle(this.myOverlay.nativeElement, 'display', 'block');
-    // let bodyElement =  document.querySelector('body');
-    // console.log("body: "+ bodyElement)
-  }
+  // ngAfterViewInit(): void {
+  //   // console.log("sidebar: "+this.mySideBar)
+  //   // console.dir(this.mySideBar.nativeElement);
+  //   // this.renderer.setStyle(this.mySideBar.nativeElement, 'display', 'block');
+  //   // this.renderer.setStyle(this.myOverlay.nativeElement, 'display', 'block');
+  //   // let bodyElement =  document.querySelector('body');
+  //   // console.log("body: "+ bodyElement)
+  // }
 
-  ngOnInit() {
-    // const bodyElement = document.querySelector('body');
-    // console.log("body: "+ bodyElement)
-  }
+  // ngOnInit() {
+  //   // const bodyElement = document.querySelector('body');
+  //   // console.log("body: "+ bodyElement)
+  // }
 
 
 
